@@ -1,6 +1,6 @@
-package at.sma.basics;
+package at.sma.basics.struct;
 
-import javax.swing.*;
+import at.sma.mp.oop.auto.Auto;
 
 public class Loop1 {
     public static void main(String[] args) {

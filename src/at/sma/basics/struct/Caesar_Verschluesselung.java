@@ -1,4 +1,4 @@
-package at.sma.basics;
+package at.sma.basics.struct;
 import javax.swing.plaf.synth.SynthTreeUI;
 import java.util.Scanner;
 

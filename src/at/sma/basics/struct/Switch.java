@@ -1,4 +1,4 @@
-package at.sma.basics;
+package at.sma.basics.struct;
 
 import java.sql.SQLOutput;
 import java.util.Random;
