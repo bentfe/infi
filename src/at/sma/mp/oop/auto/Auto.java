@@ -5,16 +5,28 @@ public class Auto {
     private String sFarbe;
     private int iRäder;
 
+    private int fahrzeughoehe;
+
     public Auto() {
         this.iLeistung = 0;
         this.sFarbe = "keine Angabe";
         this.iRäder = 0;
+        this.fahrzeughoehe = 0;
     }
 
-    public Auto(int iLeistung, String sFarbe, int iRäder) {
+    public Auto(int iLeistung, String sFarbe, int iRäder, int fahrzeughoehe) {
         this.iLeistung = iLeistung;
         this.sFarbe = sFarbe;
         this.iRäder = iRäder;
+        this.fahrzeughoehe = fahrzeughoehe;
+    }
+
+    public int getFahrzeughoehe() {
+        return fahrzeughoehe;
+    }
+
+    public void setFahrzeughoehe(int fahrzeughoehe) {
+        this.fahrzeughoehe = fahrzeughoehe;
     }
 
     public int getiRäder() {
