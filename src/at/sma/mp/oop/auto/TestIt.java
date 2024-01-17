@@ -37,6 +37,16 @@ public class TestIt {
             System.out.println(garage.getStellplaetze() + " stell - frei " + garage.getFreiePlaetze());
         }
 
+        System.out.println("Alle Autos ergeben eine Höhe von" + garage.getGesamtFahrzeugeUebereinander());
+
+        System.out.println(garage.getAutosmitFarbe("rot") + " Autos mit der Farbe rot sind in der Garage");
+
+        System.out.println(garage.getAutosmitLeistung(150, 200) + " Autos mit der Leistung 150-200 sind in der Garage.");
+
+        garage.loescheAutosFarbe("rot");
+
+        System.out.println(garage.getAutosmitFarbe("rot") + " Autos mit der Farbe rot sind in der Garage");
+
 
     }
 }
