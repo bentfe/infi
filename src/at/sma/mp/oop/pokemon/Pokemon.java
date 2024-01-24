@@ -82,9 +82,7 @@ public class Pokemon {
         this.groesse = 0;
     }
 
-    public String info
-
-    {
+    public void info() {
         System.out.println("Das Pokemon" + this.getPokemon()
                 + " ist vom Typ " + this.getTyp()
                 + ", ist auf dem Level " + this.getLevel()
@@ -93,10 +91,11 @@ public class Pokemon {
     }
 
     public Pokemon(int anzahl) {
+        this.pokemonListe = new ArrayList<>();
         String[] aPokemons = {"Pikachu", "Glumanda", "Bisasam", "Schiggy", "Mew", "Serpifeu", "Woingenau"};
         for (var i = 0; i <= anzahl; i++) {
             int level = r.nextInt(100) + 1;
-            int groesse = r.nextInt() + 1;
+            int groesse = r.nextInt(150-50) + 1+50;
             int iPokemon = r.nextInt(aPokemons.length);
             String pokemonName = aPokemons[iPokemon];
             int alter = r.nextInt(40) + 1;
@@ -120,6 +119,13 @@ public class Pokemon {
                 default:
             }
             this.pokemonListe.add(new Pokemon(pokemonName,typ,level,alter,groesse));
+        }
+        for (Pokemon pokemon : this.pokemonListe) {
+            System.out.println("Das Pokemon " + pokemon.getPokemon()
+                    + " ist vom Typ " + pokemon.getTyp()
+                    + ", ist auf dem Level " + pokemon.getLevel()
+                    + ", ist " + pokemon.getAlter() + " Jahre alt und ist "
+                    + pokemon.getGroesse() + " cm groß.");
         }
     }
 }
